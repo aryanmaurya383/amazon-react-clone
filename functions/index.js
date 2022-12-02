@@ -2,7 +2,8 @@ const functions = require("firebase-functions");
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require("cors")({ origin: true });
-const stripe = require('stripe')('sk_test_51M9ixlSChn9rVxr4RDaYoM9VAWS6H1QcLTgbP2dnPntpsmb4OqJR42cV1ZXpD8xWxzIDIEm01Z4hklKJGZlT76kb00fpzTEXOq');
+const { secretTestKey } = require('./SecretTestKey.js')
+const stripe = require('stripe')(secretTestKey);
 
 // API
 
